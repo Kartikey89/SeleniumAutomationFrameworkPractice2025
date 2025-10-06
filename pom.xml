@@ -38,6 +38,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.10.2</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- this is log4j-core dependancy-->
@@ -113,15 +114,4 @@
 
 
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.3</version>
-			</plugin>
-			 </plugins>
-			
-	</build>
 </project>
