@@ -90,43 +90,4 @@
 			<version>1.18.42</version>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.5.3</version>
-				<configuration>
-					<properties>
-						<configurationParameters>
-							junit.jupiter.execution.parallel.enabled = true
-							junit.jupiter.execution.parallel.mode.default =
-							concurrent
-							junit.jupiter.execution.parallel.config.strategy =
-							fixed
-							junit.jupiter.execution.parallel.config.fixed.parallelism
-							= ${surefire.parallel}
-							junit.jupiter.execution.parallel.config.fixed.max-pool-size
-							= ${surefire.parallel}
-						</configurationParameters>
-					</properties>
-					<rerunFailingTestsCount>3</rerunFailingTestsCount>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-
-	<!-- ✅✅ ADDED BELOW ONLY TO FIX HTML REPORT ERROR ✅✅ -->
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>3.5.3</version>
-			</plugin>
-		</plugins>
-	</reporting>
-	<!-- ✅✅ END FIX ✅✅ -->
-
 </project>
